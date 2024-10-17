@@ -1,0 +1,7 @@
+/project-folder
+    /.devcontainer
+        Dockerfile
+        devcontainer.json
+    /src
+        app.py
+        ...
