@@ -1,34 +1,37 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/cpp
 {
-	"name": "PhdResearch",
-"build": {
-    "context": "..",  // Ensures Docker looks at the project root
-    "dockerfile": "Dockerfile"
-},
-	// Features to add to the dev container. More info: https://containers.dev/features.
-	// "features": {},
-
-	// Configure tool-specific properties.
-	"customizations": {
-		// Configure properties specific to VS Code.
-		"vscode": {
+    "name": "PhdResearch",
+    "build": {
+        "context": "..", // Ensures Docker looks at the project root
+        "dockerfile": "Dockerfile"
+    },
+    // Features to add to the dev container. More info: https://containers.dev/features.
+    // "features": {},
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "bash",
                 "terminal.integrated.profiles.linux": {
                     "bash": {
                         "path": "/bin/bash",
-                        "args": ["--login"]
+                        "args": [
+                            "--login"
+                        ]
                     }
-                }
+                },
+                "python.envFile": "${workspaceFolder}/.env"
             },
             "extensions": [
                 "streetsidesoftware.code-spell-checker",
-				"ms-azuretools.vscode-docker"
+                "ms-azuretools.vscode-docker",
+                "ms-python.python", // Python extension
+                "mechatroner.rainbow-csv" // CSV coloring extension
             ]
         }
-	},
-
-	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
-	"remoteUser": "dev"
+    },
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+    "remoteUser": "dev"
 }

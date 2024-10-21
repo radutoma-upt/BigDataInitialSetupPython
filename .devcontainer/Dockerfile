@@ -20,6 +20,8 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install pytest pytest-cov
+
 # Create a new user 'dev' and give them sudo access
 RUN useradd -m dev -s /bin/bash \
     && echo 'dev ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
