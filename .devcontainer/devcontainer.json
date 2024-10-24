@@ -30,7 +30,8 @@
                 "ms-python.python", // Python extension
                 "mechatroner.rainbow-csv", // CSV coloring extension
                 "ms-python.pylint", // Python linter
-                "lextudio.restructuredtext"  // Sphinx and reStructuredText extension
+                "lextudio.restructuredtext",  // Sphinx and reStructuredText extension
+                "reddevil.pythondoc" // PyDoc extension for docstring generation
             ]
         }
     },
