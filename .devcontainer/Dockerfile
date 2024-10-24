@@ -20,7 +20,14 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install pytest pytest-cov
+RUN pip install pytest pytest-cov sphinx sphinx-autodoc-typehints sphinx-rtd-theme
+
+# Install locales and set UTF-8 locale
+RUN apt-get update && apt-get install -y locales \
+    && locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8  
+ENV LANGUAGE en_US:en  
+ENV LC_ALL en_US.UTF-8
 
 # Create a new user 'dev' and give them sudo access
 RUN useradd -m dev -s /bin/bash \

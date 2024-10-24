@@ -28,7 +28,9 @@
                 "streetsidesoftware.code-spell-checker",
                 "ms-azuretools.vscode-docker",
                 "ms-python.python", // Python extension
-                "mechatroner.rainbow-csv" // CSV coloring extension
+                "mechatroner.rainbow-csv", // CSV coloring extension
+                "ms-python.pylint", // Python linter
+                "lextudio.restructuredtext"  // Sphinx and reStructuredText extension
             ]
         }
     },
