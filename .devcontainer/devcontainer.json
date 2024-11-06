@@ -1,5 +1,5 @@
 {
-    "name": "PhdResearch",
+    "name": "Data Science in Industry",
     "build": {
         "context": "..", // Ensures Docker looks at the project root
         "dockerfile": "Dockerfile"
